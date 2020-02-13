@@ -35,8 +35,12 @@ function make_main_game_state( game )
         // in X or Y.
         // This function returns the rotation angle that makes it visually match its
         // new trajectory.
+<<<<<<< HEAD
         bouncy.rotation = game.physics.arcade.accelerateToPointer(bouncy, game.input.activePointer, 500, 500, 500);
         
+=======
+        bouncy.rotation = game.physics.arcade.accelerateToPointer( bouncy, game.input.activePointer, 5000, 5000, 5000 );
+>>>>>>> 5a8c516088ed3388385094913f5cb64b36aa8633
     }
     
     return { "preload": preload, "create": create, "update": update };
