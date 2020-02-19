@@ -5,6 +5,7 @@ function make_main_game_state(game) {
         // Load an image and call it 'logo'.
         game.load.image('map', 'assets/map.png');
         game.load.image('ghost', 'assets/ghost.png');
+        game.load.physics('physicsData', 'assets/map.json');
     }
 
     var map;
@@ -19,19 +20,17 @@ function make_main_game_state(game) {
         // Create a sprite at the center of the screen using the 'logo' image.
         map = game.add.sprite(0, 0, 'map');
         ghost = game.add.sprite(game.world.centerX, game.world.centerY, 'ghost');
-
-
+        game.physics.p2.enable([map, ghost], true);
+        map.body.clearShapes();
+        map.body.loadPolygon('physicsData', 'map');
 
         game.physics.p2.gravity.y = -300;
         /*this.game.physics.p2.enable(map, Phaser.Physics.ARCADE);
         this.game.physics.p2.enable(ghost, Phaser.Physics.ARCADE);*/
-        game.physics.p2.enable([map, ghost], true);
+        
         map.body.collideWorldBounds = false;
         //this.physics.add.collider(map, ghost);
-        map.body.clearShapes();
-        map.body.loadPolygon('physicsData', 'map');
-        ghost.body.clearShapes();
-        ghost.body.loadPolygon('physicsData', 'ghost');
+        
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         
