@@ -19,7 +19,7 @@ GameStates.makeGame = function( game, shared ) {
         create: function () {
     
             //  Honestly, just about anything could go here. It's YOUR game after all. Eat your heart out!
-            
+            game.physics.arcade.gravity.y = 100;
             // Create a sprite at the center of the screen using the 'logo' image.
             bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'logo' );
             // Anchor the sprite at its center, as opposed to its top-left corner.
@@ -43,7 +43,18 @@ GameStates.makeGame = function( game, shared ) {
         },
     
         update: function () {
-    
+
+            if (this.input.keyboard.createCursorKeys().right.isDown) {
+                bouncy.body.VelocityX = 500;
+            }
+            if (this.input.keyboard.createCursorKeys().left.isDown) {
+                bouncy.body.VelocityX = -500;
+            }
+            if (this.input.keyboard.createCursorKeys().up.isDown) {
+            }
+
+
+
             //  Honestly, just about anything could go here. It's YOUR game after all. Eat your heart out!
             
             // Accelerate the 'logo' sprite towards the cursor,
@@ -51,7 +62,7 @@ GameStates.makeGame = function( game, shared ) {
             // in X or Y.
             // This function returns the rotation angle that makes it visually match its
             // new trajectory.
-            bouncy.rotation = game.physics.arcade.accelerateToPointer( bouncy, game.input.activePointer, 500, 500, 500 );
+            //bouncy.rotation = game.physics.arcade.accelerateToPointer( bouncy, game.input.activePointer, 500, 500, 500 );
         }
     };
 };

@@ -24,7 +24,7 @@ GameStates.makeMainMenu = function( game, shared ) {
             //	Naturally I expect you to do something significantly better :)
     
             music = game.add.audio('titleMusic');
-            music.play();
+            //music.play();
     
             game.add.sprite(0, 0, 'titlePage');
     
