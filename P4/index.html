@@ -1,0 +1,111 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser Basic Project Template</title>
+	<script src="js/phaser.min.js"></script>
+	<!-- Boot.js must come first since it creates the BasicGame object
+	that stores all the states. -->
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/MainMenu.js"></script>
+	<script src="js/Lvl1.js"></script>
+	<script src="js/Lvl2.js"></script>
+	<script src="js/Lvl3.js"></script>
+	<script src="js/Win.js"></script>
+	<!-- main.js must come last since it references the other ones. -->
+	<script src="js/main.js"></script>
+
+	<style>
+		body {
+			color: #777;
+			font-family: "Avenir", Verdana, sans-serif;
+		}
+
+		#readme {
+			margin-top: 10px;
+		}
+	</style>
+
+</head>
+<body>
+<div id="game"></div>
+<div id="readme">
+<h2>Your game title</h2>
+
+<ul>
+<li><strong>Originality:</strong>
+	You go around collecting cats which follow you around. 
+</li>
+
+<li><strong>Technical Merit:</strong>
+I had to make it so the cats properly follow the player, start following when collected, and are saved between scenes.
+	
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+	I learned how scenes work.
+	The easiest part was spawning objects. The hardest part was getting the spawned objects to behave how i want them to.
+</li>
+
+<li><strong>Prototype Assets:</strong>
+everything is mine except the play button which is an edited version of the default one.
+<ul>
+<li>Loading screen: Phaser example</li>
+<li>Button: Phaser example <a href="https://phaser.io/examples/v2/buttons/action-on-click">Action On Click</a> (edited)</li>
+<li>Everything else: self made</li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+I looked at Dr Bob for some coding references
+<ul>
+<li>The code for this example is adapted from the <a href="https://github.com/photonstorm/phaser/tree/v2.6.2/resources/Project%20Templates/Basic">Phaser Basic Project Template</a></li>
+</ul>
+</li>
+
+<li><strong>High Concept:</strong>
+	a platformer about collecting cats.
+</li>
+
+<li>
+	<strong>Theme:</strong>
+	person with lots and lots of cats
+</li>
+
+<li><strong>Mandated Variety:</strong>
+platformer
+</li>
+
+<li><strong>Prototype Goal:</strong>
+	pets and some platforming
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+fun playing a little platformer
+</li>
+
+<li><strong>Gameplay:</strong>
+the player can move around using the left and right arrow keys and jump using the up arrow. The player can get to the next level by touching the wall. The player can collect cats by touching uncollected cats.
+	</li>
+
+<li><strong>Strategies:</strong>
+jumping from platform to platform
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+So there is this guy who likes cats so he decided to go find some and when he did they started following him around.
+</li>
+
+<li><strong>Target Audience:</strong>
+college students at GMU taking CS325.
+</li>
+
+<li><strong>Play Time:</strong>
+	a few minutes
+</li>
+
+</ul>
+</div>
+</body>
+</html>
