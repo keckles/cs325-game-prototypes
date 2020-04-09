@@ -117,6 +117,8 @@ GameStates.makeGame = function( game, shared ) {
             // Create a sprite at the center of the screen using the 'logo' image.
             GameObjects.add(background = game.add.sprite(game.world.centerX, game.world.centerY, 'background'));
             game.physics.enable(background, Phaser.Physics.ARCADE );
+            background.scale.x = 20;
+            background.scale.y = 20;
             background.anchor.setTo(0.5,0.5);
             player = game.add.sprite( game.world.centerX, game.world.centerY, 'wbcell' );
             pg = game.add.group();
@@ -191,7 +193,7 @@ GameStates.makeGame = function( game, shared ) {
             //console.log(debug++);
             game.physics.arcade.overlap(virus, cells, infectCell);
             game.physics.arcade.overlap(virus, pg, eatVirus);
-            game.physics.arcade.overlap(virus, walls, eatVirus);
+            game.physics.arcade.collide(virus, walls);
             //game.physics.arcade.collide(background, player, test);
             var lastPos = [playerPosition.x,playerPosition.y];
             if (keys.right.isDown) {
