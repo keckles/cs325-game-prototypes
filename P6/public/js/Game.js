@@ -107,7 +107,7 @@ GameStates.makeGame = function( game, shared ) {
     
         create: function () {
             var self = this;
-            this.socket = io();
+            this.socket = io('10.0.0.140:8081');
             
 
             keys = {
