@@ -107,6 +107,8 @@ GameStates.makeGame = function( game, shared ) {
     
         create: function () {
             var self = this;
+
+
             this.socket = io('http://73.147.47.1:8081/');
             
 
