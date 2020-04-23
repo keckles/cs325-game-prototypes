@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Phaser Basic Project Template</title>
+		
+	
+	<script src="js/phaser.min.js"></script>
+	<!-- Boot.js must come first since it creates the BasicGame object
+	that stores all the states. -->
+	<script src="js/Boot.js"></script>
+	<script src="js/Preloader.js"></script>
+	<script src="js/MainMenu.js"></script>
+	<script src="js/Game.js"></script>
+	<!-- main.js must come last since it references the other ones. -->
+	<script src="js/main.js"></script>
+
+<style>
+body
+{
+    color: #777;
+    font-family: "Avenir", Verdana, sans-serif;
+}
+#readme
+{
+    margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+	<script src="/socket.io/socket.io.js"></script>
+<div id="game"></div>
+<div id="readme">
+<h2>Your game title</h2>
+Biological Warfare
+<ul>
+<li><strong>Originality:</strong>
+It's a fairly original concepts since you play as a cell fighting a virus.
+</li>
+
+<li><strong>Technical Merit:</strong>
+What is interesting about your game technology?
+The viruses infect the other cells and the player can eat the virus. 
+Also I had to get all the objects in the game to move when the player moves and make the viruses aim for cells.
+</li>
+
+<li><strong>Prototype Postmortem:</strong>
+What did you learn from this prototype?
+What was the easiest or hardest part of making it?
+
+I had some troubles like halfway through because everything was lagging. 
+It turned out to be caused by the fact that I was using arrays instead of groups and once I switched over it mostly fixed it.
+
+</li>
+
+<li><strong>Prototype Assets:</strong>
+Did you make your prototype assets from scratch? Did you borrow them? Cite your sources here.
+<ul>
+<li>Loading bar: example file</li>
+<li>everything else: self-made</li>
+</ul>
+</li>
+
+<li><strong>Prototype Closest Other Game:</strong>
+Which other game most closely resembles your game? If you are borrowing code from a Phaser Example, you must say so here. If you borrow code from elsewhere, you must say so here.
+<ul>
+<li>somewhat inspired by agar.io style games</a></li>
+</ul>
+</li>
+
+<li><strong>High Concept:</strong>
+You play as a white blood cell and your mission is to eat all the viruses before they infect everything.
+</li>
+
+<li><strong>Theme:</strong>
+State which of the Storymatic themes you used.
+N/A
+</li>
+
+<li><strong>Mandated Variety:</strong>
+State which input, randomness, genre, and play style you used in this prototype.
+N/A
+</li>
+
+<li><strong>Prototype Goal:</strong>
+What game mechanic is this prototype evaluating?
+right now i was just trying to get the core mechanics done like viruses infecting cells and the player eating the virus.
+</li>
+
+<li><strong>Player Experience Goals:</strong>
+What experience do you want players to have when playing your game?
+a fun one obviosly.
+</li>
+
+<li><strong>Gameplay:</strong>
+Use the arrow keys to move around the map to find the virus cells and touch them to eat them before they can infect the other cells to make more of themselves.
+</li>
+
+<li><strong>Strategies:</strong>
+guarding a small group of cells and letting all the viruses come find you
+running around looking for viruses
+</li>
+
+<li><strong>Story/Setting/Premise:</strong>
+Inside a human body an unknown virus that can infect other cells to make more of itself threatens the body. You the literal only white blood cell in the entire body (don't question it) need to single handedly destroy it.
+
+</li>
+
+<li><strong>Target Audience:</strong>
+people in quarenteen from coronavirus.
+</li>
+
+<li><strong>Play Time:</strong>
+i have no idea
+</li>
+
+</ul>
+</div>
+</body>
+</html>
