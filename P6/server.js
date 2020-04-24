@@ -1,7 +1,16 @@
-var express = require('express');
-var app = express();
-var server = require('http').Server(app);
-var io = require('socket.io').listen(server);
+const express = require('express');
+const app = express();
+const https = require('https');
+const fs = require('fs');
+const options = {
+    key: fs.readFileSync('key.pem'),
+    cert: fs.readFileSync('cert.pem')//,
+    //port: 8081
+};
+const server = https.Server(options, app);
+const io = require('socket.io').listen(server);
+
+
 
 var players = {};
 

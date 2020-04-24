@@ -109,7 +109,7 @@ GameStates.makeGame = function( game, shared ) {
             var self = this;
 
 
-            this.socket = io('http://biowar.gq:8081/');
+            this.socket = io('https://biowar.gq:8081/');
             
 
             keys = {
