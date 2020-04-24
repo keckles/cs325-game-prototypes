@@ -44,7 +44,7 @@ body
 <h2>Your game title</h2>
 Biological Warfare
 <ul>
-<li><strong>New Features:</strong>made it multiplayer.</li>
+<li><strong>New Features:</strong> made an online multiplayer and got it to mostly work on github. Quick note there are some weird security issues so to make it work you need to go over to https://biowar.gq:2053/ and "Advanced" and then "Proceed to biowar.gq (unsafe)" that will basically just let it access the server so you can actually use the multiplayer.</li>
 <li><strong>Originality:</strong>
 It's a fairly original concepts since you play as a cell fighting a virus.
 </li>
@@ -52,6 +52,10 @@ It's a fairly original concepts since you play as a cell fighting a virus.
 What is interesting about your game technology?
 The viruses infect the other cells and the player can eat the virus. 
 Also I had to get all the objects in the game to move when the player moves and make the viruses aim for cells.
+<br>
+iteration:
+first I set up multiplayer and made it synce the players properly then I had to set up a server to access and then set up encryption stuff to make it so git will even consider accessing it (even after the whole specifically going to the server and saying its fine thing)
+
 </li>
 
 <li><strong>Prototype Postmortem:</strong>
@@ -60,6 +64,9 @@ What was the easiest or hardest part of making it?
 
 I had some troubles like halfway through because everything was lagging. 
 It turned out to be caused by the fact that I was using arrays instead of groups and once I switched over it mostly fixed it.
+<br>
+iteration:
+Multiplayer is very hard. 
 
 </li>
 
