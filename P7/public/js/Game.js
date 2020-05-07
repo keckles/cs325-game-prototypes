@@ -25,7 +25,7 @@ GameStates.makeGame = function (game, shared) {
     var points = 0;
     var text;
     var socket;
-    var style = { font: "15px Verdana", fill: "#ffffffff", align: "center" };
+    var style;
     var texts = {};
     var health = 1000;
     var hp;
@@ -127,7 +127,7 @@ GameStates.makeGame = function (game, shared) {
 
             socket = io('https://biowar.gq:2053/');
 
-
+            style = { font: "15px Verdana", fill: "#ffffffff", align: "center" };
             keys = {
                 left: this.input.keyboard.createCursorKeys().left,
                 right: this.input.keyboard.createCursorKeys().right,
