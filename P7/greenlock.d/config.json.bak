@@ -1,0 +1,34 @@
+{
+  "defaults": {
+    "store": {
+      "module": "greenlock-store-fs"
+    },
+    "challenges": {
+      "http-01": {
+        "module": "acme-http-01-standalone"
+      }
+    },
+    "renewOffset": "-45d",
+    "renewStagger": "3d",
+    "accountKeyType": "EC-P256",
+    "serverKeyType": "RSA-2048",
+    "subscriberEmail": "kecklesalt@gmail.com"
+  },
+  "sites": [
+    {
+      "subject": "biowar.gq",
+      "altnames": [
+        "biowar.gq",
+        "www.biowar.gq"
+      ],
+      "renewAt": 1
+    },
+    {
+      "subject": "ns1.biowar.gq",
+      "altnames": [
+        "ns1.biowar.gq"
+      ],
+      "renewAt": 1
+    }
+  ]
+}
